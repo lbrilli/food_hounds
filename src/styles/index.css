@@ -1,0 +1,10 @@
+#board {
+    border: solid lightblue 2px;
+    background-image: url("../src/styles/2-05.png");
+    background-size: cover;
+}
+
+#cannon {
+    border: black;
+    fill: black;
+}

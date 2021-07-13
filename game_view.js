@@ -1,0 +1,1 @@
+const GameArea = require("/.game_area");
