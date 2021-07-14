@@ -4,7 +4,15 @@
     background-size: cover;
 }
 
-#cannon {
-    border: black;
-    fill: black;
+h1 {
+    color:#b5651d;
 }
+
+/* some updates I would like to fix
+1. make the wrap work properly in BOTH directions
+2. take only faces for the dogs
+3. add in info around the screen
+4. create a scoring system*/
+
+
+
