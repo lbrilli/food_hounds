@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://treat_hounds/./src/styles/index.css"],"names":[],"mappings":"AAAA,OACI,2BACA,+CACA,sBAGJ,QACI,aACA,W","file":"main.css","sourcesContent":["#board {\n    border: solid lightblue 2px;\n    background-image: url(\"../src/styles/2-05.png\");\n    background-size: cover;\n}\n\n#cannon {\n    border: black;\n    fill: black;\n}"],"sourceRoot":""}
