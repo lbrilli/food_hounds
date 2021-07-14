@@ -1,9 +1,19 @@
+import Treat from "./treat";
+
 class Cannon {
     constructor() {
         this.pos = 285;
         this.drawCannon(this.pos);
-        this.moveCannon = this.moveCannon.bind(this);
-        window.addEventListener("keydown", this.moveCannon, false)
+        this.eventHandler = this.eventHandler.bind(this);
+        window.addEventListener("keydown", this.eventHandler, false)
+    }
+
+    eventHandler(e) {
+        if (e.key === " ") {
+            this.fireCannon(e);
+        } else {
+            this.moveCannon(e);
+        }
     }
 
     drawCannon(pos) {
@@ -13,7 +23,7 @@ class Cannon {
         const cannon = new Image(15, 30);
         cannon.addEventListener('load', function () {
             ctx.drawImage(
-                cannon, (pos), 570, 15, 30
+                cannon, pos, 570, 15, 30
             );
         }, false);
         cannon.src = "./src/styles/cannon.png";
@@ -43,7 +53,8 @@ class Cannon {
     }
 
     fireCannon() {
-        
+        const treat = new Treat(this.pos);
+        const move = setInterval(treat.moveTreat, 1000);
     }
 }
 
