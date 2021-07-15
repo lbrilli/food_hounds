@@ -23,9 +23,6 @@ class Treat {
 
     moveTreat() {
         this.eraseTreat(this.pos);
-        // if (collisonDetected()) {
-        //     console.log("collision!")
-        // }
         this.pos[1] -= 15;
         this.drawTreat(this.pos);
     }

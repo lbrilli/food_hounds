@@ -8,8 +8,8 @@ class Board {
         this.dogs = [];
         let coopers = this.setCooper();
         let lucys = this.setLucy();
-        this.cannon = new Cannon();
         this.board = this;
+        this.cannon = new Cannon(this.board);
     }
 
     setCooper() {
@@ -32,12 +32,15 @@ class Board {
         };
     };
 
-    collisonDetected() {
+    collisionDetected(treat) {
+        let boolean = false;
         this.dogs.forEach(dog => {
-           if (dog.pos === treat.pos) {
-               return true;
+            if (JSON.stringify(dog.pos) === JSON.stringify(treat.pos)) {
+               console.log("collision!")
+               boolean = true;
            }
         });
+        return boolean;
     }
 
 }

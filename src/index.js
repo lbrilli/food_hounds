@@ -5,6 +5,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const ctx = canvas.getContext("2d");
 
     const board = new Board();
-    
 
 })

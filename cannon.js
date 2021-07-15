@@ -2,9 +2,10 @@ import Treat from "./treat";
 import Board from "./board.js";
 
 class Cannon {
-    constructor() {
+    constructor(board) {
         this.pos = 285;
         this.drawCannon(this.pos);
+        this.board = board;
         this.eventHandler = this.eventHandler.bind(this);
         window.addEventListener("keydown", this.eventHandler, false)
     }
@@ -58,8 +59,14 @@ class Cannon {
         const move = setInterval( ()=> {
             //check collision
             //stop movement if true and remove treat
-            //redraw all dogs except collided
-                treat.moveTreat()
+            //keep objects from being drawn
+            //redraw all dogs except collided -- stop drawing all the dogs
+            //need to either make hotdog bigger hidden or adjust logic to account for non exact matches (range)
+            treat.moveTreat()
+            if (this.board.collisionDetected.call(this.board,treat)) {
+                clearInterval(move);
+                treat.eraseTreat(treat.pos);
+            }
             }, 50);
     }
 
