@@ -2,6 +2,7 @@
     border: solid cornflowerblue 6px;
     background-image: url("../src/styles/2-05.png");
     background-size: cover;
+    border-radius: 8px;
 }
 
 h1 {
@@ -15,12 +16,41 @@ h1 {
     justify-content: space-evenly;
     padding: 2%;
     background-color: lightblue;
+    border-radius: 8px;
 }
 
 #intro {
-    border: lightblue 2px;
+    border: solid cornflowerblue 6px;
     text-align: center;
+    margin-top: 80px;
+    height: 600px;
+    width: 200px;
+    margin-right: 6px;
+    border-radius: 8px;
 }
+
+#score {
+    border:solid cornflowerblue 6px;
+    text-align: center;
+    margin-top: 80px;
+    height: 600px;
+    width: 200px;
+    margin-left: 6px;
+    border-radius: 8px;
+}
+
+#footer {
+    border:solid cornflowerblue 6px;
+    text-align: center;
+    margin-top: 6px;
+    height: 100px;
+    width: 600px;
+    border-radius: 8px;
+}
+
+/* body {
+    background-color: rgb(223, 219, 219);
+} */
 
 
 
