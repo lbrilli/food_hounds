@@ -1,3 +1,5 @@
+import Board from "./board";
+
 class Treat {
     constructor(pos, y = 555){
         this.pos = [pos,y];
@@ -21,6 +23,9 @@ class Treat {
 
     moveTreat() {
         this.eraseTreat(this.pos);
+        // if (collisonDetected()) {
+        //     console.log("collision!")
+        // }
         this.pos[1] -= 15;
         this.drawTreat(this.pos);
     }

@@ -1,4 +1,5 @@
 import Treat from "./treat";
+import Board from "./board.js";
 
 class Cannon {
     constructor() {
@@ -55,7 +56,11 @@ class Cannon {
     fireCannon() {
         const treat = new Treat(this.pos);
         const move = setInterval( ()=> {
-            treat.moveTreat()}, 50);
+            //check collision
+            //stop movement if true and remove treat
+            //redraw all dogs except collided
+                treat.moveTreat()
+            }, 50);
     }
 
 }

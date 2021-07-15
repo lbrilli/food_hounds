@@ -9,13 +9,13 @@ class Board {
         let coopers = this.setCooper();
         let lucys = this.setLucy();
         this.cannon = new Cannon();
+        this.board = this;
     }
 
     setCooper() {
         for (let i = 30; i < 600;){
             for (let j = 270; j < 360;){
                 this.dogs.push(new Cooper([i,j]));
-                debugger
                 j += 30;
             };
             i += 60;
@@ -33,7 +33,11 @@ class Board {
     };
 
     collisonDetected() {
-        // if (treat.pos === )
+        this.dogs.forEach(dog => {
+           if (dog.pos === treat.pos) {
+               return true;
+           }
+        });
     }
 
 }
