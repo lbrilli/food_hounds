@@ -13,6 +13,8 @@ class Dog {
     eraseDog(pos) {
         const canvas = document.getElementById("board");
         var ctx = canvas.getContext("2d");
-        ctx.clearRect(); //finish statement to erase
+        ctx.clearRect(pos[0],pos[1],30,30); //finish statement to erase
     }
 }
+
+export default Dog;

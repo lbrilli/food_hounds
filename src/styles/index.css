@@ -50,6 +50,8 @@ h1 {
     height: 100px;
     width: 600px;
     border-radius: 8px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* body {

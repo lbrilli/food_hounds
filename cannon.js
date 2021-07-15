@@ -57,17 +57,13 @@ class Cannon {
     fireCannon() {
         const treat = new Treat(this.pos);
         const move = setInterval( ()=> {
-            //check collision
-            //stop movement if true and remove treat
-            //keep objects from being drawn
-            //redraw all dogs except collided -- stop drawing all the dogs
-            //need to either make hotdog bigger hidden or adjust logic to account for non exact matches (range)
+            //need to either make hotdog bigger hidden or adjust logic to account 
+            //for non exact matches (range)
             treat.moveTreat()
             if (this.board.collisionDetected.call(this.board,treat)) {
                 clearInterval(move);
-                treat.eraseTreat(treat.pos);
             }
-            }, 50);
+        }, 50);
     }
 
 }

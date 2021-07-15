@@ -1,7 +1,7 @@
 import Lucy from "./lucy";
 import Cooper from "./cooper";
 import Cannon from "./cannon";
-import Treat from "./treat";
+import Dog from "./dog";
 
 class Board {
     constructor() {
@@ -32,11 +32,14 @@ class Board {
         };
     };
 
+
+
     collisionDetected(treat) {
         let boolean = false;
         this.dogs.forEach(dog => {
-            if (JSON.stringify(dog.pos) === JSON.stringify(treat.pos)) {
-               console.log("collision!")
+            //if treat.pos is greater than x and less than x+30 AND greater than y and less than y +30
+            if ((treat.pos[0] >= dog.pos[0] && treat.pos[0] <= dog.pos[0] + 30) && (treat.pos[1] >= dog.pos[1] && treat.pos[1] <= dog.pos[1]+30)) {
+            // if (JSON.stringify(dog.pos) === JSON.stringify(treat.pos)) {
                boolean = true;
            }
         });
