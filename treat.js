@@ -1,6 +1,6 @@
 class Treat {
-    constructor(pos){
-        this.pos = [pos,555];
+    constructor(pos, y = 555){
+        this.pos = [pos,y];
         this.drawTreat(this.pos);
         // this.moveTreat = this.moveTreat.bind(this);
     }
@@ -9,7 +9,7 @@ class Treat {
         const canvas = document.getElementById("board");
         var ctx = canvas.getContext("2d");
 
-        const treat = new Image(15, 5)
+        const treat = new Image(15, 15)
         treat.addEventListener('load', function () {
             ctx.drawImage(
                 treat, pos[0], pos[1], 15, 15
@@ -18,16 +18,17 @@ class Treat {
         treat.src = "./src/styles/treat.png"
     }
 
-    eraseTreat(pos) {
-        const canvas = document.getElementById("board");
-        var ctx = canvas.getContext("2d");
-        ctx.clearRect(pos[0], pos[1], canvas.width, canvas.height)
-    }
 
     moveTreat() {
         this.eraseTreat(this.pos);
-        this.pos[1] -= 5;
+        this.pos[1] -= 15;
         this.drawTreat(this.pos);
+    }
+
+    eraseTreat(pos) {
+        const canvas = document.getElementById("board");
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(pos[0],pos[1],15,15)
     }
 
 }

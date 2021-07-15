@@ -10,7 +10,7 @@ class Cannon {
 
     eventHandler(e) {
         if (e.key === " ") {
-            this.fireCannon(e);
+            this.fireCannon();
         } else {
             this.moveCannon(e);
         }
@@ -54,8 +54,10 @@ class Cannon {
 
     fireCannon() {
         const treat = new Treat(this.pos);
-        const move = setInterval(treat.moveTreat, 1000);
+        const move = setInterval( ()=> {
+            treat.moveTreat()}, 50);
     }
+
 }
 
 export default Cannon;
